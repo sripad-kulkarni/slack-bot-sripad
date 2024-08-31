@@ -15,4 +15,5 @@ def message_hello(message, say):
 
 # Start your app
 if __name__ == "__main__":
-    SocketModeHandler(app, os.environ["SLACK_APP_TOKEN"]).start()
+    #SocketModeHandler(app, os.environ["SLACK_APP_TOKEN"]).start()
+    app.start(port=int(os.environ.get("PORT", 3000)))
