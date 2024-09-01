@@ -33,7 +33,7 @@ def update_home_tab(client, event, logger):
                 "type": "section",
                 "text": {
                     "type": "mrkdwn",
-                    "text": "Hi <@{user_id}>! *Welcome to your _App's Home tab_* :tada:"
+                    "text": "Hi <@{event['user']}>! *Welcome to your _App's Home tab_* :tada:"
                 }
             },
             {
