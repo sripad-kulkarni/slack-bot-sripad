@@ -57,11 +57,7 @@ def update_home_tab(client, event, logger):
                 }
               }
             ]
-          }
-        ]
-
-        {
-    "blocks": [
+          },
         {
             "type": "input",
             "block_id": "ticket_id_block",
@@ -249,8 +245,8 @@ def update_home_tab(client, event, logger):
             ]
         }
     ]
-}
       }
+
     )
 
   except Exception as e:
