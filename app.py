@@ -1,4 +1,5 @@
 import os
+import json
 from slack_bolt import App
 from slack_bolt.adapter.socket_mode import SocketModeHandler
 
@@ -32,7 +33,7 @@ def update_home_tab(client, event, logger):
                 "type": "section",
                 "text": {
                     "type": "mrkdwn",
-                    "text": "Hi <@{app_home_opened['user']}>! *Welcome to your _App's Home tab_* :tada:"
+                    "text": "Hi <@{user_id}>! *Welcome to your _App's Home tab_* :tada:"
                 }
             },
             {
