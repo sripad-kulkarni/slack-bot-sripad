@@ -27,7 +27,6 @@ def update_home_tab(client, event, logger):
         "type": "home",
         "callback_id": "home_view",
 
-
     "blocks": [
         {
             "type": "section",
@@ -195,19 +194,15 @@ def update_home_tab(client, event, logger):
         },
         {
             "type": "input",
-            "block_id": "handoff_summary_block",
-            "label": {
-                "type": "plain_text",
-                "text": "Handoff Summary"
-            },
             "element": {
                 "type": "plain_text_input",
-                "action_id": "handoff_summary",
                 "multiline": true,
-                "placeholder": {
-                    "type": "plain_text",
-                    "text": "Enter summary of the handoff"
-                }
+                "action_id": "plain_text_input-action"
+            },
+            "label": {
+                "type": "plain_text",
+                "text": "Summary",
+                "emoji": true
             }
         },
         {
@@ -226,7 +221,6 @@ def update_home_tab(client, event, logger):
             ]
         }
     ]
-
 
       }
 
