@@ -37,34 +37,6 @@ def update_home_tab(client, event, logger):
             },
             {
                 "type": "divider"
-            },
-            {
-                "type": "input",
-                "element": {
-                    "type": "plain_text_input",
-                    "multiline": true,
-                    "action_id": "plain_text_input-action"
-                },
-                "label": {
-                    "type": "plain_text",
-                    "text": "Summary",
-                    "emoji": true
-                }
-            },
-            {
-                "type": "actions",
-                "block_id": "acknowledge_button_block",
-                "elements": [
-                    {
-                        "type": "button",
-                        "text": {
-                            "type": "plain_text",
-                            "text": "Acknowledge"
-                        },
-                        "style": "primary",
-                        "action_id": "acknowledge_handoff"
-                    }
-                ]
             }
         ]
 
