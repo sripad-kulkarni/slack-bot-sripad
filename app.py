@@ -27,200 +27,46 @@ def update_home_tab(client, event, logger):
         "type": "home",
         "callback_id": "home_view",
 
-    "blocks": [
-        {
-            "type": "section",
-            "text": {
-                "type": "mrkdwn",
-                "text": "Hi <@{app_home_opened['user']}>! *Welcome to your _App's Home tab_* :tada:"
-            }
-        },
-        {
-            "type": "divider"
-        },
-        {
-            "type": "input",
-            "block_id": "ticket_id_block",
-            "label": {
-                "type": "plain_text",
-                "text": "Ticket ID"
-            },
-            "element": {
-                "type": "plain_text_input",
-                "action_id": "ticket_id",
-                "placeholder": {
-                    "type": "plain_text",
-                    "text": "Enter Ticket ID"
+        "blocks": [
+            {
+                "type": "section",
+                "text": {
+                    "type": "mrkdwn",
+                    "text": "Hi <@{app_home_opened['user']}>! *Welcome to your _App's Home tab_* :tada:"
                 }
-            }
-        },
-        {
-            "type": "input",
-            "block_id": "current_shift_block",
-            "label": {
-                "type": "plain_text",
-                "text": "Current Shift"
             },
-            "element": {
-                "type": "static_select",
-                "action_id": "current_shift",
-                "placeholder": {
-                    "type": "plain_text",
-                    "text": "Select current shift"
+            {
+                "type": "divider"
+            },
+            {
+                "type": "input",
+                "element": {
+                    "type": "plain_text_input",
+                    "multiline": true,
+                    "action_id": "plain_text_input-action"
                 },
-                "options": [
-                    {
-                        "text": {
-                            "type": "plain_text",
-                            "text": "APAC"
-                        },
-                        "value": "apac"
-                    },
-                    {
-                        "text": {
-                            "type": "plain_text",
-                            "text": "IST"
-                        },
-                        "value": "ist"
-                    },
-                    {
-                        "text": {
-                            "type": "plain_text",
-                            "text": "EMEA"
-                        },
-                        "value": "emea"
-                    },
-                    {
-                        "text": {
-                            "type": "plain_text",
-                            "text": "EST"
-                        },
-                        "value": "est"
-                    },
-                    {
-                        "text": {
-                            "type": "plain_text",
-                            "text": "PST"
-                        },
-                        "value": "pst"
-                    }
-                ]
-            }
-        },
-        {
-            "type": "input",
-            "block_id": "handoff_shift_block",
-            "label": {
-                "type": "plain_text",
-                "text": "Handoff Shift"
-            },
-            "element": {
-                "type": "static_select",
-                "action_id": "handoff_shift",
-                "placeholder": {
+                "label": {
                     "type": "plain_text",
-                    "text": "Select handoff shift"
-                },
-                "options": [
-                    {
-                        "text": {
-                            "type": "plain_text",
-                            "text": "APAC"
-                        },
-                        "value": "apac"
-                    },
-                    {
-                        "text": {
-                            "type": "plain_text",
-                            "text": "IST"
-                        },
-                        "value": "ist"
-                    },
-                    {
-                        "text": {
-                            "type": "plain_text",
-                            "text": "EMEA"
-                        },
-                        "value": "emea"
-                    },
-                    {
-                        "text": {
-                            "type": "plain_text",
-                            "text": "EST"
-                        },
-                        "value": "est"
-                    },
-                    {
-                        "text": {
-                            "type": "plain_text",
-                            "text": "PST"
-                        },
-                        "value": "pst"
-                    }
-                ]
-            }
-        },
-        {
-            "type": "input",
-            "block_id": "handoff_type_block",
-            "label": {
-                "type": "plain_text",
-                "text": "Handoff Type"
-            },
-            "element": {
-                "type": "static_select",
-                "action_id": "handoff_type",
-                "placeholder": {
-                    "type": "plain_text",
-                    "text": "Select handoff type"
-                },
-                "options": [
-                    {
-                        "text": {
-                            "type": "plain_text",
-                            "text": "Full Handoff"
-                        },
-                        "value": "full_handoff"
-                    },
-                    {
-                        "text": {
-                            "type": "plain_text",
-                            "text": "Partial Handoff"
-                        },
-                        "value": "partial_handoff"
-                    }
-                ]
-            }
-        },
-        {
-            "type": "input",
-            "element": {
-                "type": "plain_text_input",
-                "multiline": true,
-                "action_id": "plain_text_input-action"
-            },
-            "label": {
-                "type": "plain_text",
-                "text": "Summary",
-                "emoji": true
-            }
-        },
-        {
-            "type": "actions",
-            "block_id": "acknowledge_button_block",
-            "elements": [
-                {
-                    "type": "button",
-                    "text": {
-                        "type": "plain_text",
-                        "text": "Acknowledge"
-                    },
-                    "style": "primary",
-                    "action_id": "acknowledge_handoff"
+                    "text": "Summary",
+                    "emoji": true
                 }
-            ]
-        }
-    ]
+            },
+            {
+                "type": "actions",
+                "block_id": "acknowledge_button_block",
+                "elements": [
+                    {
+                        "type": "button",
+                        "text": {
+                            "type": "plain_text",
+                            "text": "Acknowledge"
+                        },
+                        "style": "primary",
+                        "action_id": "acknowledge_handoff"
+                    }
+                ]
+            }
+        ]
 
       }
 
